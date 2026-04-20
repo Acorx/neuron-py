@@ -1,0 +1,13 @@
+[project]
+name = "neuron"
+version = "0.1.0"
+description = "🧠 Neural networks from mathematical formulas. No GPU needed."
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+dev = ["pytest", "numpy"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends._legacy:_Backend"
