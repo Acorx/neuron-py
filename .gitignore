@@ -2,3 +2,5 @@ __pycache__/
 *.pyc
 test_*.py
 *.egg-info/
+train_cifar10.py
+cifar10_results.txt
