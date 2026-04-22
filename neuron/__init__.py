@@ -6,7 +6,6 @@ replace — millions of parameters.
 """
 
 from neuron.fourier_init import FourierInitLinear, FourierMLP, FourierResMLP
-from neuron.fourier_weight import FourierWeightLinear, FourierWeightMLP
 from neuron.fourier_conv import FourierInitConv2d, FourierCNN, XavierCNN
 from neuron.fourier_transformer import (
     FourierInitAttention,
@@ -24,15 +23,13 @@ from neuron.data import (
     load_mnist, load_cifar10,
 )
 
-__version__ = "0.5.0"
+__version__ = "0.5.1"
 __all__ = [
-    # Init
+    # Fourier-Init (proven: better init + 2.6x compression resilience)
     "FourierInitLinear", "FourierMLP", "FourierResMLP",
     "FourierInitConv2d", "FourierCNN", "XavierCNN",
     "FourierInitAttention",
-    # Weightless
-    "FourierWeightLinear", "FourierWeightMLP",
-    # Transformer
+    # Fourier-Weight (⚠️ experimental — rank collapse known issue)
     "FourierWeightAttention", "FourierTransformerBlock", "FourierTransformer",
     # Pruning
     "fft_compress_weight", "fft_compress_model", "apply_fft_compression",
